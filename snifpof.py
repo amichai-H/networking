@@ -16,7 +16,7 @@ def spoof_pkt(pkt):
         print("Source IP: ", newpkt[IP].src)
         print("Destinatin IP: ", newpkt[IP].dst)
         send(newpkt, verbose=0)
-        send(ip/icmp)
+        # send(ip/icmp)
 
 
 pkt = sniff(filter='icmp[icmptype] == icmp-echo', prn=spoof_pkt)
